@@ -1,17 +1,17 @@
 FROM node
 
-WORKDIR /usr/liridon-devops-training/liridon-nextjs-app
+WORKDIR /usr/liridon-devops-training/
 
-COPY package*.json /usr/liridon-devops-training/liridon-nextjs-app
+COPY package*.json /usr/liridon-devops-training/
 
 RUN npm install
 
-COPY . /usr/liridon-devops-training/liridon-nextjs-app
+COPY . /usr/liridon-devops-training/
 
 RUN npm run build
 
-COPY . /usr/liridon-devops-training/liridon-nextjs-app  
+COPY . /usr/liridon-devops-training/
 
 EXPOSE 3000
 
-CMD [ "executable" ] [ "npm","run","start" ]
+ENTRYPOINT [ "npm","run","start" ]
