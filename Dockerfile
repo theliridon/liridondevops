@@ -14,4 +14,4 @@ COPY . /usr/liridon-devops-training/liridon-nextjs-app
 
 EXPOSE 3000
 
-CMD [ "executable" ] [ "npm","run","start" ]
+ENTRYPOINT [ "npm","run","start" ]
